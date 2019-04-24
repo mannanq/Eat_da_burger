@@ -1,0 +1,11 @@
+<li>
+    {{burger_name}}
+    <p>
+
+        <a class="change-state waves-effect waves-light btn" data-id="{{id}}" data-newDevoured="{{devoured}}">
+            {{#unless devoured}}Devour it!{{/unless}}
+        </a>
+
+        <a id="delete-burger" class="waves-effect waves-light btn red lighten-2" data-id="{{id}}">Delete Burger!</a>
+    </p>
+</li>

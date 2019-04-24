@@ -1,0 +1,52 @@
+<div class="container">
+
+    <h2>Burgers not Devoured</h2>
+
+    <ul id="devoured">
+        {{#each burger}}
+        {{#unless devoured}}
+        {{> burgers/burger-block}}
+        {{/unless}}
+        {{/each}}
+    </ul>
+    <br>
+    <h2>
+        Devoured Burgers
+    </h2>
+    <ul id="undevoured">
+        {{#each burger}}
+        {{#if devoured}}
+        {{> burgers/burger-block}}
+        {{/if}}
+        {{/each}}
+    </ul>
+    <br>
+    <h2>Add a Burger</h2>
+
+
+    <form class="create-form">
+
+        <div class="form-group">
+            <label for="burger">Burger Name:</label>
+            <input type="text" id="burger" name="burger_name">
+        </div>
+
+        <p>Devoured or Not devourned yet?</p>
+        <label>
+            <p>
+                <input type="radio" name="state" value="1" checked>
+                <span>Devoured</span>
+            </p>
+        </label>
+        <label>
+            <p>
+                <input type="radio" name="state" value="0">
+                <span>Not Devoured</span>
+            </p>
+        </label>
+        <p>
+            <button class="btn red waves-effect waves-light" type="submit">Add Burger</button>
+        </p>
+    </form>
+
+</div>
